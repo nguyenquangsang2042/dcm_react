@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "881480894364",
+    "project_id": "vnadcm",
+    "storage_bucket": "vnadcm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881480894364:android:911ec3dba531eb8143ea59",
+        "android_client_info": {
+          "package_name": "com.vuthao.VNADCM"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881480894364-261urq3p7ou7k67nnfnvpcpethf4cdh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh-gQW6SS5xnGUVqD-o53aHtz9eqlzl0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881480894364-261urq3p7ou7k67nnfnvpcpethf4cdh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

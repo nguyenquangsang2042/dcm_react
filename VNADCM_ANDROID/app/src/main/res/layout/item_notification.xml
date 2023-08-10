@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/icon_avatar64"/>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phạm Hoàng Minh Thu nhắc đến bạn trong bình"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/text14"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/imgAvatar"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 giờ trước"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/text14"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/imgAvatar"
+        android:layout_below="@id/tvTitle"/>
+</RelativeLayout>

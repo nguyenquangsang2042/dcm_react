@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".document.DocumentDetailWebActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_back" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/clPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:includeFontPadding="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Hướng Dẫn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text18"
+            android:textStyle="bold" />
+
+        <Switch
+            android:gravity="center"
+            android:id="@+id/switch_offline_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+             />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:indeterminateTint="@color/clPrimary"
+        android:max="100" />
+
+    <com.vuthao.VNADCM.base.custom.CustomSwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvNodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/nodata"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text16"
+                android:textStyle="italic"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </com.vuthao.VNADCM.base.custom.CustomSwipeRefreshLayout>
+</LinearLayout>
