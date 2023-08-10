@@ -5,9 +5,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { login, logout } from "./src/actions/authActions";
 import store from "./src/store/configureStore";
 import AppNavigator from "./src/components/navigation/AppNavigator";
-import { setLoading } from "./src/actions/LoginAction";
-import LoginScreen from "./src/components/login_screen/LoginScreen";
-import { Text, View } from "react-native";
 import LoadingScreen from "./src/components/loading_screen/LoadingScreen";
 
 const App = () => {
