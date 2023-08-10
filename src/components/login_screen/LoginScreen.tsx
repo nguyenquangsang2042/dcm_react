@@ -7,6 +7,8 @@ import { login } from "../../actions/authActions";
 import LoadingScreen from "../loading_screen/LoadingScreen";
 import { setLoading } from "../../actions/LoginAction";
 import AlertHelper from "../../utils/AlertHelper";
+import ApiUtils from "../../utils/ApiUtils";
+import API_CONFIG from "../../config/ApiConfig";
 
 const LoginScreen = () => {
   const [username, setUsername] = useState("vnadmsuat.adminsite");
@@ -27,39 +29,46 @@ const LoginScreen = () => {
     }, 2000);
   };
   return (
-    <ImageBackground style={styles.container} source={require("../../../assets/images/background_main.png")}>
+    <ImageBackground style={styles.imageBackground} source={require("../../../assets/images/background_main.png")}>
       {
-        loading ? (<LoadingScreen />) : (<><View style={styles.inputContainer}>
-          <View style={styles.containerIcon}>
-            <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
-          </View>
-          <TextInput
-            style={styles.input}
-            placeholder="Username"
-            value={username}
-            onChangeText={(text) => setUsername(text)}
-          />
-          <View style={styles.containerIcon}>
-            <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
-          </View>
-        </View>
-          <View style={styles.inputContainer}>
-            <View style={styles.containerIcon}>
-              <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
+        loading ? (<LoadingScreen />) : (
+          <>
+            <View style={styles.container}>
+              <View style={styles.inputContainer}>
+                <View style={styles.containerIcon}>
+                  <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
+                </View>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Username"
+                  value={username}
+                  onChangeText={(text) => setUsername(text)}
+                />
+                <View style={styles.containerIcon}>
+                  <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
+                </View>
+              </View>
             </View>
-            <TextInput
-              style={styles.input}
-              placeholder="Password"
-              value={password}
-              onChangeText={(text) => setPassword(text)}
-              secureTextEntry
-            />
-            <View style={styles.containerIcon}>
-              <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
+            <View style={styles.container}>
+              <View style={styles.inputContainer}>
+                <View style={styles.containerIcon}>
+                  <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
+                </View>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Password"
+                  value={password}
+                  onChangeText={(text) => setPassword(text)}
+                  secureTextEntry
+                />
+                <View style={styles.containerIcon}>
+                  <Image source={require("../../../assets/images/icon_username.png")} style={styles.icon} />
+                </View>
+              </View>
             </View>
-          </View>
-          <Pressable style={styles.buttonLogin} onPress={handleLogin}><Text
-            style={styles.textButtonLogin}>Đăng nhập</Text></Pressable></>)
+            <Pressable style={styles.buttonLogin} onPress={handleLogin}><Text
+              style={styles.textButtonLogin}>Đăng nhập</Text></Pressable>
+          </>)
       }
     </ImageBackground>
   );
@@ -84,18 +93,18 @@ const styles = StyleSheet.create(
       height: 20
     },
     container: {
-      flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      padding: 20,
-      backgroundColor: "white"
+      paddingLeft: 20,
+      paddingRight: 20,
+      paddingBottom:5
     },
     input: {
       width: "100%",
       height: 40
     },
     buttonLogin: {
-      width: "100%",
+      width:'90%',
       backgroundColor: "#DBA410",
       alignItems: "center",
       justifyContent: "center",
@@ -104,6 +113,12 @@ const styles = StyleSheet.create(
     },
     textButtonLogin: {
       color: "white"
+    },
+    imageBackground: {
+      width: "100%",
+      height: "100%",
+      justifyContent: "center",
+      alignItems: "center"
     }
   }
 );
