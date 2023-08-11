@@ -15,7 +15,7 @@ const App = () => {
       const user = await AsyncStorage.getItem('user');
       if (user) {
         const parsedUser = JSON.parse(user);
-        store.dispatch(login(parsedUser));
+        store.dispatch(await login(parsedUser));
       } else {
         store.dispatch(logout());
       }

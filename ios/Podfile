@@ -19,6 +19,10 @@ target 'DCM_React' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'react-native-rsa-native', :path => '../node_modules/react-native-rsa-native'
+
+  pod 'react-native-randombytes', :path => '../node_modules/react-native-randombytes'
+
   target 'DCM_ReactTests' do
     inherit! :complete
     # Pods for testing

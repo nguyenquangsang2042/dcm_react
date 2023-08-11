@@ -19,7 +19,7 @@ const LoginScreen = () => {
     dispatch(setLoading(true));
     setTimeout(async () => {
       const user = { username, password };
-      const data = dispatch(login(user)).payload;
+      const data = dispatch(await login(user)).payload;
       if (data != null) {
         await AsyncStorage.setItem("user", JSON.stringify(user));
       } else {
